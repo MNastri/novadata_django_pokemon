@@ -20,13 +20,13 @@
                     <a class="nav-item nav-link" href="{% url 'pokemons-home' %}">
                         Home</a>
                     <a class="nav-item nav-link" href="{% url 'pokemons-home' %}">
-                        About_TODO</a></div>
+                        About</a></div>
 
                 <!-- Navbar Right Side -->
                 <div class="navbar-nav">
                     {% if user.is_authenticated %}
                         <a class="nav-item nav-link" href="{% url 'pokemons-home' %}">
-                            {{ user }}_TODO</a>
+                            {{ user }}</a>
                         <a class="nav-item nav-link" href="{% url 'logout' %}">
                             Logout</a>
 
