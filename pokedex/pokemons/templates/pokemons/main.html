@@ -1,0 +1,28 @@
+{% extends "pokemons/base.html" %}
+{% block main %}
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}{% endblock content%}</div>
+        <div class="col-md-4">
+            <div class="content-section">
+                <h3>
+                    Our Sidebar_TODO</h3>
+                <p class='text-muted'>
+                    You can put any information here you'd like.
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-light">
+                        <a href=
+                                {% if user.is_authenticated %}
+                                    "{% url 'pokemons-create' %}"
+                                {% else %}
+                                    "#"
+                                {% endif %}
+                        >
+                            Add Pokemon</a></li>
+                    <li class="list-group-item list-group-item-light">
+                        Announcements_TODO</li>
+                    <li class="list-group-item list-group-item-light">
+                        Calendars_TODO</li>
+                    <li class="list-group-item list-group-item-light">
+                        etc_TODO</li></ul></p></div></div></div></main>{% endblock main %}

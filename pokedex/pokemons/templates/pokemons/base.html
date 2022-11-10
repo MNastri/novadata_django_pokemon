@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "pokemons/bootstrap_head.html" %}
+        {% if title %}
+            <title>
+                {{ title }}</title>
+        {% else %}
+            <title>
+                Teste Novadata</title>{% endif %}</head>
+    <body>
+        {% include "pokemons/navigation.html" %}
+        {% include 'pokemons/messages.html' %}
+        {% block main %}{% endblock main %}
+        {% include "pokemons/bootstrap_body.html" %}</body></html>
