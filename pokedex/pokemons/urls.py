@@ -12,6 +12,16 @@ urlpatterns = [
         name="pokemons-detail",
     ),
     path(
+        "pokemon/<int:pk>/favourite",
+        views.favourite_pokemon,
+        name="pokemons-favourite",
+    ),
+    path(
+        "pokemon/<int:pk>/unfavourite",
+        views.unfavourite_pokemon,
+        name="pokemons-unfavourite",
+    ),
+    path(
         "pokemon/new/",
         views.PokemonCreate.as_view(),
         name="pokemons-create",
