@@ -24,3 +24,13 @@ def register(request):
         form = UserRegisterForm()
     context = {"form": form}
     return render(request, template_name="users/register.html", context=context)
+
+
+def favourites(request):
+    fav = request.user.profile.favourites
+    if fav.count() == 0:
+        error_message = f"You have no favourites so far"
+        messages.error(request, error_message)
+        return redirect("pokemons-home")
+    context = {"object_list": fav.all()}
+    return render(request, template_name="users/favourites.html", context=context)

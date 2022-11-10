@@ -7,9 +7,9 @@
         <div class="col-md-4">
             <div class="content-section">
                 <h3>
-                    Our Sidebar_TODO</h3>
+                    Sidebar</h3>
                 <p class='text-muted'>
-                    You can put any information here you'd like.
+                    Great information here...
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-light">
                         <a href=
@@ -21,7 +21,14 @@
                         >
                             Add Pokemon</a></li>
                     <li class="list-group-item list-group-item-light">
-                        Announcements_TODO</li>
+                        <a href=
+                                {% if user.is_authenticated %}
+                                    "{% url 'favourites' %}"
+                                {% else %}
+                                    "#"
+                                {% endif %}
+                        >
+                            Favourites</a></li>
                     <li class="list-group-item list-group-item-light">
                         Calendars_TODO</li>
                     <li class="list-group-item list-group-item-light">
