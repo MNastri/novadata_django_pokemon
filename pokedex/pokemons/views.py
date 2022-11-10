@@ -25,7 +25,7 @@ class PokemonDetail(DetailView):
 
 class PokemonCreate(LoginRequiredMixin, CreateView):
     model = models.Pokemon
-    fields = ["name", "image", "number"]
+    fields = ["name", "image", "number", "hp", "attack", "defense", "sp_atk", "sp_def"]
 
     def form_valid(self, form):
         form.instance.author = self.request.user
